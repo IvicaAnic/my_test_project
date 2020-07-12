@@ -1,0 +1,63 @@
+<form [formGroup]="form" class="login-form">
+
+    <mat-form-field appearance="fill">
+        <mat-label>AuthorName</mat-label>
+        <input matInput 
+              
+               formControlName="AuthorName">
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>AuthorVorname</mat-label>
+        <input matInput 
+              
+               formControlName="AuthorVorname">
+
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Stadt</mat-label>
+        <input matInput 
+               
+               formControlName="Stadt">
+            
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>PLZ</mat-label>
+        <input matInput 
+              
+               formControlName="PLZ">
+            
+
+    </mat-form-field>
+
+    <button mat-raised-button color="primary"
+           >Save Author</button>
+
+</form>
+<div>
+    <br>
+   <h4> Book Authors</h4>
+    <br>
+    
+<table>
+<tr>
+    <td>Name</td>
+    <td>Vorname</td>
+    <td>Strasse</td>
+    <td>PLZ</td>
+    <td>Stadt</td>
+    </tr>
+    <tr *ngFor="let author of AuthorModels">
+    <td>{{author.AuthorVorname}}</td>
+    <td>{{author.AuthorName}}</td>
+    <td>{{author.Strasse}}</td>
+    <td>{{author.PLZ}}</td>
+    <td>{{author.Stadt}}</td>
+</tr>
+</table>
+</div>
+
+  

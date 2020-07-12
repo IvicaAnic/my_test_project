@@ -1,0 +1,73 @@
+<p>bookcomp works!</p>
+<form [formGroup]="form1" class="login-form">
+
+    <mat-form-field appearance="fill">
+        <mat-label>BookTitle</mat-label>
+        <input matInput 
+              
+               formControlName="BookTitle">
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>BookPrice</mat-label>
+        <input matInput 
+              
+               formControlName="BookPrice">
+
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Author</mat-label>
+        <input matInput 
+               
+               formControlName="Author">
+            
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>BookVerlag</mat-label>
+        <input matInput 
+              
+               formControlName="BookVerlag">
+            
+
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>BookISDN</mat-label>
+        <input matInput 
+              
+               formControlName="BookISDN">
+            
+
+    </mat-form-field>
+    <button mat-raised-button color="primary"  (click)="loadbooks()">Load Book's</button>
+
+    <button mat-raised-button color="primary"
+           >Save Book</button>
+
+</form>
+<div>
+    <br>
+   <h4> Available BOOKS</h4>
+    <br>
+    
+<table>
+<tr>
+    <td>ID</td>
+    <td>ISDN</td>
+    <td>Price</td>
+    <td>Title</td>
+    <td>Verlag</td>
+    </tr>
+    <tr *ngFor="let book of BooksModels">
+    <td>{{book.AuthorId}}</td>
+    <td>{{book.BookISDN}}</td>
+    <td>{{book.BookPrice}}</td>
+    <td>{{book.BookTitle}}</td>
+    <td>{{book.BookVerlag}}</td>
+</tr>
+</table>
+</div>
+
+  
